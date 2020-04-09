@@ -1,0 +1,124 @@
+//
+//  main.c
+//  kalkulator Przemysław Polanowski 232233
+//
+//  Created by Przemysław Polanowski on 07/04/2020.
+//  Copyright © 2020 Przemysław Polanowski. All rights reserved.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+float a , b , wynik;
+int znak ,k ;
+
+
+
+
+
+
+int main(int argc, const char * argv[])
+   {
+           while ( znak != 5)
+            
+        
+           {
+               
+               
+               
+       printf("\n--------------------------\n");
+       
+       printf("Kalkulator !!!\n");
+       printf("--------------------------\n\n");
+         
+       printf("Podaj pierwsza liczbe\n ");
+       scanf("%3f",&a);
+    
+     
+       printf("Podaj druga liczbe\n") ;
+       scanf("%3f",&b);
+       
+       printf("a=%f\n", a);
+       printf("b=%f\n" , b);
+       
+       
+       
+       
+       printf("Opreacja\n\n"
+              "1. Dodawanie(+)\n"
+              "2. Odejmowanie(-)\n"
+              "3. Mnożenie(*)\n"
+              "4. Dzielenie (/)\n"
+              "5.Wyłącz\n");
+       
+              
+   
+       
+       printf("Wybierz numer operacji\n");
+              
+       scanf("%d",&znak );
+     
+       
+    
+
+
+       switch(znak)
+       {
+   case 1:
+       
+           wynik = a + b;
+       printf("%f+%f=%3f\n",a,b ,wynik);
+       break ;
+       
+   case 2 :
+               
+               wynik = a - b ;
+               printf("%f-%f=%3f\n", a ,b,wynik);
+               break ;
+               
+           
+           case 3:
+               
+               wynik = a * b ;
+               printf("%f*%f=%3f\n",a , b , wynik );
+               break ;
+               
+           case 4 :
+               if (b!=0)
+               {
+                   wynik = a/b ;
+               printf("%f / %f = %3f\n", a , b, wynik );
+               }
+            else
+                   
+            {
+                printf("Nie mozna dzielić przez 0\n");
+       
+                    }
+                    
+              break;
+               
+       
+              
+           case 5 :
+               
+               printf("\nWylaczam kalkulator...\n");
+            
+               break;
+               
+               
+           default :
+               printf("\nWybierz wlasciwa opcje!!!\n");
+               
+               break ;
+               
+    
+       }
+               
+               
+       
+       }
+        
+        return 0 ;
+
+    }
